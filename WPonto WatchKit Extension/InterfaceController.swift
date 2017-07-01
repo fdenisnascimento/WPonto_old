@@ -15,15 +15,25 @@ class InterfaceController: WKInterfaceController {
     let firebase = FirebaseManager()
     
     func createUser() -> Void {
-        firebase.signup(email: "denis.sitesrj1@gmail.com", password: "123456") { (userID) in
+        User.signup(email: "denis.sitesrj1@gmail.com", password: "123456") { (userID) in
             debugPrint("userID: \(String(describing: userID!))")
         }
+    }
+    
+    
+    func createPoint() -> Void {
+        
+        Point.register { (result) in
+            debugPrint("result: \(result!)")
+        }
+        
     }
     
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         
-        createUser()
+//        createUser()
+        createPoint()
         
         // Configure interface objects here.
     }
