@@ -1,15 +1,81 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="11055"/>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="12029"/>
     </dependencies>
     <scenes>
         <!--Interface Controller-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModuleProvider="target"/>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="WPonto_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <button width="1" alignment="left" title="Marcar Ponto" id="1Ff-3j-Mhh">
+                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="backgroundColor" red="0.067309372594025807" green="1" blue="0.57632855182106013" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <connections>
+                                <action selector="goToRegister" destination="AgC-eL-Hgc" id="QN6-j9-vDz"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="Consultar" id="lBa-Zj-0bx">
+                            <connections>
+                                <segue destination="gm2-YQ-Vf4" kind="push" id="Qt3-FO-RNr"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="Apagar" id="uoZ-tE-B3N">
+                            <connections>
+                                <segue destination="7vc-RH-0H2" kind="push" id="v4K-wB-keo"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <edgeInsets key="margins" left="5" right="5" top="5" bottom="5"/>
+                    <connections>
+                        <outlet property="btnRegister" destination="1Ff-3j-Mhh" id="kxQ-Ur-vYY"/>
+                    </connections>
+                </controller>
             </objects>
+            <point key="canvasLocation" x="-312" y="-137"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="xMz-h6-8ft">
+            <objects>
+                <controller id="gm2-YQ-Vf4">
+                    <items>
+                        <label width="1" alignment="center" text="Consultar" textAlignment="center" id="iU7-eh-zrI"/>
+                        <table alignment="left" id="RZn-02-Ds0">
+                            <items>
+                                <tableRow id="3lV-xt-EBy">
+                                    <group key="rootItem" width="1" alignment="left" id="FWn-6a-hy3"/>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="-13" y="-261"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="7tp-Nh-9ed">
+            <objects>
+                <controller id="7vc-RH-0H2">
+                    <items>
+                        <label width="1" alignment="center" text="Apagar" textAlignment="center" id="GyR-k3-QRl"/>
+                        <imageView width="1" alignment="left" id="T2x-B9-ddV"/>
+                        <table alignment="left" id="oO4-p4-nKq">
+                            <items>
+                                <tableRow id="ffy-0R-ugw">
+                                    <group key="rootItem" width="1" alignment="left" id="DRX-dU-oYO"/>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="-13" y="6"/>
         </scene>
     </scenes>
 </document>

@@ -11,8 +11,20 @@ import Foundation
 
 
 class InterfaceController: WKInterfaceController {
-
-    let firebase = FirebaseManager()
+    
+    @IBOutlet var btnRegister: WKInterfaceButton!
+    
+    @IBAction func goToRegister() {
+        
+        WKAlert.confirm(controller: self, message: "Confirma?") { (result) in
+            if result == 0 {
+                self.btnRegister.setTitle("Registrando...")
+                self.btnRegister.setEnabled(false)
+                self.createPoint()
+            }
+        }
+    }
+    
     
     func createUser() -> Void {
         User.signup(email: "denis.sitesrj1@gmail.com", password: "123456") { (userID) in
@@ -23,8 +35,14 @@ class InterfaceController: WKInterfaceController {
     
     func createPoint() -> Void {
         
-        Point.register { (result) in
-            debugPrint("result: \(result!)")
+        Point.register { (created) in
+            if created {
+                WKAlert.show(controller: self, message: "Marcação registrada com sucesso")
+            }else{
+                WKAlert.show(controller: self, message: "Não foi possível efetuar a marcação")
+            }
+            self.btnRegister.setEnabled(true)
+            self.btnRegister.setTitle("Marcar ponto")
         }
         
     }
@@ -32,8 +50,24 @@ class InterfaceController: WKInterfaceController {
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         
-//        createUser()
-        createPoint()
+        //        createUser()
+        //        createPoint()
+        
+        Point.retrieveDayPointsFromUser(day: 3) { (result) in
+            debugPrint("day:\(String(describing: result))")
+        }
+        
+        //        Point.retrieveMonthPointsFromUser(month: 07) { (result) in
+        //            debugPrint("month:\(String(describing: result))")
+        //        }
+        //
+        //        Point.retrieveYearPointsFromUser(year: 2017) { (result) in
+        //               debugPrint("year:\(String(describing: result))")
+        //        }
+        //
+        //        Point.retrieveAllPointsFromUser { (result) in
+        //            debugPrint("all:\(String(describing: result))")
+        //        }
         
         // Configure interface objects here.
     }
@@ -47,5 +81,5 @@ class InterfaceController: WKInterfaceController {
         // This method is called when watch view controller is no longer visible
         super.didDeactivate()
     }
-
+    
 }

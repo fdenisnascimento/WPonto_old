@@ -13,6 +13,31 @@ class FirebaseManager: NSObject {
     
     //MARK: Public methods
     
+    
+    class func get(url : String, completion: @escaping (_ result: Dictionary<String, Any>?)->()) {
+        
+        let taskGet = URLSession.shared.dataTask(with: URL(string: url)!) { (data, request, error) in
+            if error == nil {
+                if let result = data {
+                    do{
+                        if  let json =  try JSONSerialization.jsonObject(with: result, options: []) as? Dictionary<String, Any> {
+                            completion(json)
+                        }
+                        
+                    }catch{
+                        completion(nil)
+                    }
+                }
+            }else{
+                completion(nil)
+            }
+  
+        }
+        taskGet.resume()
+        
+    }
+
+    
     class func post(url : String,params : Dictionary<String, String>, completion: @escaping (_ result: Dictionary<String, Any>?)->()) {
         
         

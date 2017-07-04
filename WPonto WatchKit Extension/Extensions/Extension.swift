@@ -17,7 +17,7 @@ extension Date: Dateable {
         let year = Calendar.current.component(.year, from: self)
         let month = Calendar.current.component(.month, from: self)
         let day = Calendar.current.component(.day, from: self)
-        return  "\(String(format: "%02d", year))\(String(format: "%02d", month))\(String(format: "%02d", day))"
+        return  "\(year)\(String(format: "%02d", month))\(String(format: "%02d", day))"
     }
     
     
@@ -26,6 +26,19 @@ extension Date: Dateable {
         let minute = Calendar.current.component(.minute, from: self)
         return  "\(String(format: "%02d", hour)):\(String(format: "%02d", minute))"
     }
+    
+    func year() -> String {
+        return  String(Calendar.current.component(.year, from: self))
+    }
+    
+    func month() -> String {
+        return  String(format:"%02d", Calendar.current.component(.month, from: self))
+    }
+
+    func day() -> String {
+        return  String(format:"%02d", Calendar.current.component(.day, from: self))
+    }
+
     
     
 }
