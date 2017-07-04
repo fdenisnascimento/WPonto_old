@@ -16,7 +16,6 @@
 		5C2C23E81F07CDB1003E2E3A /* Dateable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2C23E71F07CDB1003E2E3A /* Dateable.swift */; };
 		5C2C23E91F07CDB1003E2E3A /* Dateable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2C23E71F07CDB1003E2E3A /* Dateable.swift */; };
 		5C2C23ED1F0B2C81003E2E3A /* WKAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2C23EB1F0B2C81003E2E3A /* WKAlert.swift */; };
-		5C2C23F01F0B2F08003E2E3A /* BaseInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2C23EE1F0B2F08003E2E3A /* BaseInterfaceController.swift */; };
 		5C8409761F05DDC600C54ED0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8409751F05DDC600C54ED0 /* AppDelegate.swift */; };
 		5C8409781F05DDC600C54ED0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8409771F05DDC600C54ED0 /* ViewController.swift */; };
 		5C84097B1F05DDC600C54ED0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C8409791F05DDC600C54ED0 /* Main.storyboard */; };
@@ -89,7 +88,6 @@
 		5C2C23E31F07C64E003E2E3A /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		5C2C23E71F07CDB1003E2E3A /* Dateable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dateable.swift; sourceTree = "<group>"; };
 		5C2C23EB1F0B2C81003E2E3A /* WKAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WKAlert.swift; sourceTree = "<group>"; };
-		5C2C23EE1F0B2F08003E2E3A /* BaseInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseInterfaceController.swift; sourceTree = "<group>"; };
 		5C8409721F05DDC600C54ED0 /* WPonto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WPonto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C8409751F05DDC600C54ED0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5C8409771F05DDC600C54ED0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -236,7 +234,6 @@
 				5C8409A71F05DDC600C54ED0 /* Assets.xcassets */,
 				5C8409A91F05DDC600C54ED0 /* Info.plist */,
 				5C8409BA1F05DE0500C54ED0 /* FirebaseManager.swift */,
-				5C2C23EE1F0B2F08003E2E3A /* BaseInterfaceController.swift */,
 			);
 			path = "WPonto WatchKit Extension";
 			sourceTree = "<group>";
@@ -440,7 +437,6 @@
 				5C2C23E51F07C64E003E2E3A /* Extension.swift in Sources */,
 				5C8409A61F05DDC600C54ED0 /* ExtensionDelegate.swift in Sources */,
 				5C2C23E91F07CDB1003E2E3A /* Dateable.swift in Sources */,
-				5C2C23F01F0B2F08003E2E3A /* BaseInterfaceController.swift in Sources */,
 				5C8409A41F05DDC600C54ED0 /* InterfaceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

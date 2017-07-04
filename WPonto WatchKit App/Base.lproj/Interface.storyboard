@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
     <device id="watch38" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="watchOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="12029"/>
     </dependencies>
     <scenes>
@@ -46,13 +46,6 @@
                 <controller id="gm2-YQ-Vf4">
                     <items>
                         <label width="1" alignment="center" text="Consultar" textAlignment="center" id="iU7-eh-zrI"/>
-                        <table alignment="left" id="RZn-02-Ds0">
-                            <items>
-                                <tableRow id="3lV-xt-EBy">
-                                    <group key="rootItem" width="1" alignment="left" id="FWn-6a-hy3"/>
-                                </tableRow>
-                            </items>
-                        </table>
                     </items>
                 </controller>
             </objects>
@@ -64,14 +57,6 @@
                 <controller id="7vc-RH-0H2">
                     <items>
                         <label width="1" alignment="center" text="Apagar" textAlignment="center" id="GyR-k3-QRl"/>
-                        <imageView width="1" alignment="left" id="T2x-B9-ddV"/>
-                        <table alignment="left" id="oO4-p4-nKq">
-                            <items>
-                                <tableRow id="ffy-0R-ugw">
-                                    <group key="rootItem" width="1" alignment="left" id="DRX-dU-oYO"/>
-                                </tableRow>
-                            </items>
-                        </table>
                     </items>
                 </controller>
             </objects>
