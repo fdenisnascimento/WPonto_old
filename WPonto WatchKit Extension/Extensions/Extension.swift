@@ -9,7 +9,7 @@
 import WatchKit
 
 
-extension Date: Dateable {
+extension Date {
     
     var  formatter: DateFormatter { return DateFormatter() }
     

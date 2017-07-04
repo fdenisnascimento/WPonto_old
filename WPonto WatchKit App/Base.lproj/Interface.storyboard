@@ -40,16 +40,34 @@
             </objects>
             <point key="canvasLocation" x="-312" y="-137"/>
         </scene>
-        <!--Interface Controller-->
+        <!--List Interface Controller-->
         <scene sceneID="xMz-h6-8ft">
             <objects>
-                <controller id="gm2-YQ-Vf4">
+                <controller id="gm2-YQ-Vf4" customClass="ListInterfaceController" customModule="WPonto_WatchKit_Extension">
                     <items>
-                        <label width="1" alignment="center" text="Consultar" textAlignment="center" id="iU7-eh-zrI"/>
+                        <label width="1" alignment="left" text="Total dia" id="WQK-jx-9gW"/>
+                        <table alignment="left" id="KB6-HF-2bo">
+                            <items>
+                                <tableRow identifier="HourCell" id="IgO-hX-BbE" customClass="HourCell" customModule="WPonto_WatchKit_Extension">
+                                    <group key="rootItem" width="1" alignment="left" id="FHn-of-9QR">
+                                        <items>
+                                            <label width="1" height="1" alignment="left" text="Label" textAlignment="center" id="tTG-3A-kf8"/>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="labelHour" destination="tTG-3A-kf8" id="Zpr-C1-aZw"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
                     </items>
+                    <edgeInsets key="margins" left="5" right="5" top="5" bottom="5"/>
+                    <connections>
+                        <outlet property="tableView" destination="KB6-HF-2bo" id="JjZ-zw-d61"/>
+                    </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="-13" y="-261"/>
+            <point key="canvasLocation" x="-91" y="-301"/>
         </scene>
         <!--Interface Controller-->
         <scene sceneID="7tp-Nh-9ed">
