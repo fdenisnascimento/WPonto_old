@@ -45,6 +45,26 @@ class Point: NSObject {
         
     }
     
+    class func retrieveLastMonthPointsFromUser(completion: @escaping (_ result: Dictionary<String, Any>?)->()) {
+        
+        let userId = FirebaseManager().userID()
+        let year = Date().year()
+        let month = Date().month()
+        
+        let url = String(format: "https://wponto-e1f31.firebaseio.com/user-points/%@/%@/%@.json",userId, year, month)
+        debugPrint("url:\(url)")
+        
+        FirebaseManager.get(url: url) { (result) in
+            if let json = result {
+                
+                completion(json)
+            }else{
+                completion(nil)
+            }
+        }
+        
+    }
+    
     class func retrieveYearPointsFromUser(year: Int, completion: @escaping (_ result: Dictionary<String, Any>?)->()) {
         
         let userId = FirebaseManager().userID()
